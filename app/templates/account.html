@@ -3,5 +3,14 @@
 {% block content %}
 <h1>Account</h1>
 
+{% if info %}
+    <ul>
+        <li>Username: {{ info.username }}</li>
+        <li>Email: {{ info.email }}</li>
+    </ul>
+{% else %}
+    <p>Inicia sesión para acceder a la información.</p>
+{% endif %}
+
 <script src="{{url_for('static', filename='main.js')}}"></script>
 {% endblock content %}
