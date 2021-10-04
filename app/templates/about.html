@@ -1,0 +1,14 @@
+{% extends 'layouts.html' %}
+
+{% block content %}
+<h1>About</h1>
+<div>
+    <ul>
+    {% for info in informacion %}
+        <li>{{info['username']}}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<script src="{{url_for('static', filename='main.js')}}"></script>
+{% endblock content %}
